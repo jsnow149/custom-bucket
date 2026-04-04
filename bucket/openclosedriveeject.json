@@ -1,0 +1,41 @@
+{
+    "version": "3.51",
+    "description": "Eject, open, or close any drive: USB, DVD/CD, SSD, etc.",
+    "homepage": "http://www.softwareok.com/?seite=Microsoft/OpenCloseDriveEject",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/OpenCloseDriveEject_x64.zip",
+            "hash": "d474f3252884b32e22674f42a87bb7974d1f07ace1e04dd634b9d1575e46f72d"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/OpenCloseDriveEject.zip",
+            "hash": "794861d8b5b72d09c6f6651010c7dbf7ec4d6427f56504955d7b09173fc1e72c"
+        }
+    },
+    "bin": "OpenCloseDriveEject.exe",
+    "shortcuts": [
+        [
+            "OpenCloseDriveEject.exe",
+            "softwareOK\\OpenCloseDriveEject"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'OpenCloseDriveEject*.exe' | Select-Object -First 1 | Rename-Item -NewName 'OpenCloseDriveEject.exe'",
+        "if (!(Test-Path \"$persist_dir\\OpenCloseDriveEject.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\OpenCloseDriveEject.ini\" -Value $null }"
+    ],
+    "persist": "OpenCloseDriveEject.ini",
+    "checkver": {
+        "regex": "OpenCloseDriveEject ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/OpenCloseDriveEject_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/OpenCloseDriveEject.zip"
+            }
+        }
+    }
+}
