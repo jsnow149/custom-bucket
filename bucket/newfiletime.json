@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/NewFileTime_x64.zip",
-            "hash": "4338b3dcece38636ad918be2bd4e08f7d171a3d689e0543b5dd984305428e384"
+            "hash": "751929480a83b7aeb5e6673867b575c43dd6ad48f460f44aeb65f9ebce3ce6bc"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/NewFileTime.zip",
-            "hash": "68c0181a0355389a0bc4519cf35d22fb1a5527083dbfac3693f41115a8cfa2db"
+            "hash": "43333eeb49d0f79aacf2f363bc635437b6ccbbec67a19898cae7f6a5b9e1ba54"
         }
     },
     "shortcuts": [
