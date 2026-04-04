@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/MeinPlatz_Portable_x64.zip",
-            "hash": "09fdf0f35d5940638efbd400cd56d899a69e5c899c42864d3b2e885ed25f1dab"
+            "hash": "f07a2ae0d76cfc83dc827bce1c6b637c3015cb50e65b710e50b6c093c9fe27da"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/MeinPlatz_Portable.zip",
-            "hash": "e374779aa8174da0d0051a4996d1554210bf8e22cd8178efee9299bf73e4c610"
+            "hash": "2eb55ecc75c4155fb7aa35afbb324a224720b2e3ce0287f9965ad6f67fb5019c"
         }
     },
     "shortcuts": [
