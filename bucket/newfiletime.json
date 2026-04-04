@@ -15,8 +15,8 @@
     },
     "shortcuts": [
         [
-            "BlankAndSecure.exe",
-            "softwareOK\\BlankAndSecure"
+            "NewFileTime.exe",
+            "softwareOK\\NewFileTime"
         ]
     ],
     "pre_install": [
