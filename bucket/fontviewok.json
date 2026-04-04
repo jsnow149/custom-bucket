@@ -1,0 +1,41 @@
+{
+    "version": "9.23",
+    "description": "The Font-View-OK, creates a quick visual overview of fonts.",
+    "homepage": "http://www.softwareok.com/?seite=Freeware/FontViewOK",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.softwareok.com/Download/FontViewOK_Portable_x64.zip",
+            "hash": "01cce2a865dd53cf246e5615b93c37dd8e090cb24f8b770dd168f271710b1be4"
+        },
+        "32bit": {
+            "url": "http://www.softwareok.com/Download/FontViewOK_Portable.zip",
+            "hash": "a6f1bc4e1eb1eefd105dd562c5382831273aa73396ffdf8d0789d1459453a8c4"
+        }
+    },
+    "shortcuts": [
+        [
+            "FontViewOK.exe",
+            "softwareOK\\FontViewOK"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'FontViewOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'FontViewOK.exe'",
+        "if (!(Test-Path \"$persist_dir\\FontViewOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\FontViewOK.ini\" -Value $null }"
+    ],
+    "persist": "FontViewOK.ini",
+    "checkver": {
+        "url": "https://www.softwareok.com/?seite=Microsoft/FontViewOK/History",
+        "regex": "version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://www.softwareok.com/Download/FontViewOK_Portable_x64.zip"
+            },
+            "32bit": {
+                "url": "http://www.softwareok.com/Download/FontViewOK_Portable.zip"
+            }
+        }
+    }
+}
