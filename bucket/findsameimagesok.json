@@ -17,7 +17,7 @@
     "shortcuts": [
         [
             "FindSameImagesOK.exe",
-            "softwareOK\\Find.Same.Images.OK"
+            "softwareOK\\FindSameImagesOK"
         ]
     ],
     "pre_install": "Get-ChildItem \"$dir\" 'FSI_OK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'FSI_OK.exe'",
