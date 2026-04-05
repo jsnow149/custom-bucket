@@ -1,0 +1,40 @@
+{
+    "version": "3.49",
+    "description": "Determine the color value of a pixel on the desktop.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/GetPixelColor",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/GetPixelColor_Portable_x64.zip",
+            "hash": "081e8a383bc29a64aefedf2aae52b1e878b094204fb8240f41ebae5e4aa12c85"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/GetPixelColor_Portable.zip",
+            "hash": "c951f305bc92bc061590506126e044bc5bb03687544e45253a27aa64ecdbcc79"
+        }
+    },
+    "shortcuts": [
+        [
+            "GetPixelColor.exe",
+            "softwareOK\\GetPixelColor"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'GetPixelColor*.exe' | Select-Object -First 1 | Rename-Item -NewName 'GetPixelColor.exe'",
+        "if (!(Test-Path \"$persist_dir\\GetPixelColor.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\GetPixelColor.ini\" -Value $null }"
+    ],
+    "persist": "GetPixelColor.ini",
+    "checkver": {
+        "regex": "GetPixelColor ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/GetPixelColor_Portable_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/GetPixelColor_Portable.zip"
+            }
+        }
+    }
+}
