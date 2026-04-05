@@ -1,0 +1,41 @@
+{
+    "version": "6.41",
+    "description": "Auto power options adjustment to increase energy efficiency.",
+    "homepage": "http://www.softwareok.com/?seite=Microsoft/AutoPowerOptionsOK",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/AutoPowerOptionsOK_Portable.zip",
+            "hash": "01cce2a865dd53cf246e5615b93c37dd8e090cb24f8b770dd168f271710b1be4"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/AutoPowerOptionsOK_Portable.zip",
+            "hash": "a6f1bc4e1eb1eefd105dd562c5382831273aa73396ffdf8d0789d1459453a8c4"
+        }
+    },
+    "shortcuts": [
+        [
+            "AutoPowerOptionsOK.exe",
+            "softwareOK\\AutoPowerOptionsOK"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'AutoPowerOptionsOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'AutoPowerOptionsOK.exe'",
+        "if (!(Test-Path \"$persist_dir\\AutoPowerOptionsOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\AutoPowerOptionsOK.ini\" -Value $null }"
+    ],
+    "persist": "AutoPowerOptionsOK.ini",
+    "checkver": {
+        "url": "https://www.softwareok.com/?seite=Microsoft/AutoPowerOptionsOK/History",
+        "regex": "version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/AutoPowerOptionsOK_Portable.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/AutoPowerOptionsOK_Portable.zip"
+            }
+        }
+    }
+}
