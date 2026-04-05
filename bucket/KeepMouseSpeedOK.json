@@ -1,0 +1,40 @@
+{
+    "version": "3.51",
+    "description": "Keep the Mouse Speed.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/KeepMouseSpeedOK",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip",
+            "hash": "5e47eb1a52a73cabbcfd097e6a6524daa254090bfb8cfbb95e445cb02ce4d169"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip",
+            "hash": "5e47eb1a52a73cabbcfd097e6a6524daa254090bfb8cfbb95e445cb02ce4d169"
+        }
+    },
+    "shortcuts": [
+        [
+            "KeepMouseSpeedOK.exe",
+            "softwareOK\\KeepMouseSpeedOK"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'KeepMouseSpeedOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'KeepMouseSpeedOK.exe'",
+        "if (!(Test-Path \"$persist_dir\\KeepMouseSpeedOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\KeepMouseSpeedOK.ini\" -Value $null }"
+    ],
+    "persist": "KeepMouseSpeedOK.ini",
+    "checkver": {
+        "regex": "KeepMouseSpeedOK ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip"
+            }
+        }
+    }
+}
