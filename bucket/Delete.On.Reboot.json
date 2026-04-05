@@ -1,0 +1,40 @@
+{
+    "version": "3.47",
+    "description": "Delete files, directories, folders at reboot.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/Delete.On.Reboot",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/Delete.On.Reboot_x64.zip",
+            "hash": "09c1e6eddd25c06a96486a2929c06926cc112df995339030ef73fec7ec3efcbe"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/Delete.On.Reboot.zip",
+            "hash": "3f36db4190ecd456c2e1f4505bbb0bc3dc335b9920b5c73674d4c1ac9299cf43"
+        }
+    },
+    "shortcuts": [
+        [
+            "Delete.On.Reboot.exe",
+            "softwareOK\\Delete.On.Reboot"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'Delete.On.Reboot*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Delete.On.Reboot.exe'",
+        "if (!(Test-Path \"$persist_dir\\Delete.On.Reboot.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Delete.On.Reboot.ini\" -Value $null }"
+    ],
+    "persist": "Delete.On.Reboot.ini",
+    "checkver": {
+        "regex": "Delete.On.Reboot ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/Delete.On.Reboot_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/Delete.On.Reboot.zip"
+            }
+        }
+    }
+}
