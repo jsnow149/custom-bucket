@@ -1,0 +1,40 @@
+{
+    "version": "3.48",
+    "description": "Reduce your photos in file size.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/PhotoResizerOK",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/PhotoResizerOK_x64.zip",
+            "hash": "c1e71d9898ba6450037e34ee0575ca0d1cc96f758fbfa913a36f788d406ad584"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/PhotoResizerOK.zip",
+            "hash": "6032f7971063fc1941dc02228cbaf17e5aaebe6a8bf9411e7e166d8a8482f6b7"
+        }
+    },
+    "shortcuts": [
+        [
+            "PhotoResizerOK.exe",
+            "softwareOK\\PhotoResizerOK"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'PhotoResizerOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'PhotoResizerOK.exe'",
+        "if (!(Test-Path \"$persist_dir\\PhotoResizerOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\PhotoResizerOK.ini\" -Value $null }"
+    ],
+    "persist": "PhotoResizerOK.ini",
+    "checkver": {
+        "regex": "PhotoResizerOK ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/PhotoResizerOK_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/PhotoResizerOK.zip"
+            }
+        }
+    }
+}
