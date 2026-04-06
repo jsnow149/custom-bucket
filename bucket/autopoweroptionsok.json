@@ -15,12 +15,12 @@
     },
     "shortcuts": [
         [
-            "APO-OK_p.exe",
+            "AutoPowerOptionsOK.exe",
             "softwareOK\\AutoPowerOptionsOK"
         ]
     ],
     "pre_install": [
-        "Get-ChildItem \"$dir\" 'APO-OK_p*.exe' | Select-Object -First 1 | Rename-Item -NewName 'APO-OK_p.exe'",
+        "Get-ChildItem \"$dir\" 'APO-OK_p*.exe' | Select-Object -First 1 | Rename-Item -NewName 'AutoPowerOptionsOK.exe'",
         "if (!(Test-Path \"$persist_dir\\AutoPowerOptionsOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\AutoPowerOptionsOK.ini\" -Value $null }"
     ],
     "persist": "AutoPowerOptionsOK.ini",
