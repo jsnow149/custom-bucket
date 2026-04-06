@@ -5,12 +5,12 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.softwareok.eu/Download/Find.Same.Images.OK_Portable_x64.zip",
-            "hash": "4c36d96441e8d7e9cb10c8252d2ae1afa46034def908faf57fbf0dc67d332571"
+            "url": "https://www.softwareok.com/Download/Find.Same.Images.OK_Installer_x64.zip",
+            "hash": "ab776ca42934b4f83767e4f436157ad1e92766f8d987f17e286742178c763c99"
         },
         "32bit": {
-            "url": "https://www.softwareok.eu/Download/Find.Same.Images.OK_Portable.zip",
-            "hash": "3f67023e4c4e86ed2677d62378a2f22b0b16262384ba7dc481798390b308d427"
+            "url": "https://www.softwareok.com/Download/Find.Same.Images.OK_Installer.zip",
+            "hash": "83aa6a5a4badd09d5ba9f6831421614f238e9de6587ce199bb4a79a150ba46b3"
         }
     },
     "extract_dir": "Find.Same.Images.OK",
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.softwareok.eu/Download/Find.Same.Images.OK_Portable_x64.zip"
+                "url": "https://www.softwareok.com/Download/Find.Same.Images.OK_Installer_x64.zip"
             },
             "32bit": {
-                "url": "https://www.softwareok.eu/Download/Find.Same.Images.OK_Portable.zip"
+                "url": "https://www.softwareok.com/Download/Find.Same.Images.OK_Installer.zip"
             }
         }
     }
