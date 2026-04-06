@@ -1,0 +1,40 @@
+{
+    "version": "2.88",
+    "description": "Check or measure connections in the local network as well as on the Internet.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/WinPing",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/WinPing_Portable_x64.zip",
+            "hash": "9a8dba5422907b2a26667e53a02cbe8884db3bf0aa26b082ba9727dafd5aad7d"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/WinPing_Portable.zip",
+            "hash": "79b42aafb78f9db8ceea3c14438d91b42306d4943fd2dcaa45ba0083da3362e5"
+        }
+    },
+    "shortcuts": [
+        [
+            "WinPing.exe",
+            "softwareOK\\WinPing"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'WinPing*.exe' | Select-Object -First 1 | Rename-Item -NewName 'WinPing.exe'",
+        "if (!(Test-Path \"$persist_dir\\WinPing.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\WinPing.ini\" -Value $null }"
+    ],
+    "persist": "WinPing.ini",
+    "checkver": {
+        "regex": "WinPing ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/WinPing_Portable_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/WinPing_Portable.zip"
+            }
+        }
+    }
+}
