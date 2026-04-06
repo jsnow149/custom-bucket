@@ -23,7 +23,6 @@
         "Get-ChildItem \"$dir\" 'BlankAndSecure*.exe' | Select-Object -First 1 | Rename-Item -NewName 'BlankAndSecure.exe'",
         "if (!(Test-Path \"$persist_dir\\BlankAndSecure.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\BlankAndSecure.ini\" -Value $null }"
     ],
-    "persist": "BlankAndSecure.ini",
     "checkver": {
         "regex": "BlankAndSecure ([\\d.]+)"
     },
