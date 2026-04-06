@@ -1,0 +1,40 @@
+{
+    "version": "5.11",
+    "description": "Stop watch and countdown timer.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/OnlyStopWatch",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/OnlyStopWatch_Portable_x64.zip",
+            "hash": "390639bfae8ba4fe63ee5bd86956c43652e0bf47d12739bd75b3b0faa9d2339b"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/OnlyStopWatch_Portable.zip",
+            "hash": "f966b12d3aa1a0ff1fbe715f211fff863818c8482636174aadd45bd8463322a2"
+        }
+    },
+    "shortcuts": [
+        [
+            "OnlyStopWatch.exe",
+            "softwareOK\\OnlyStopWatch"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'OnlyStopWatch*.exe' | Select-Object -First 1 | Rename-Item -NewName 'OnlyStopWatch.exe'",
+        "if (!(Test-Path \"$persist_dir\\OnlyStopWatch.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\OnlyStopWatch.ini\" -Value $null }"
+    ],
+    "persist": "OnlyStopWatch.ini",
+    "checkver": {
+        "regex": "OnlyStopWatch ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/OnlyStopWatch_Portable_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/OnlyStopWatch_Portable.zip"
+            }
+        }
+    }
+}
