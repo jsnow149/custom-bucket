@@ -5,12 +5,12 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.softwareok.com/Download/DirPrintOK_Portable_x64.zip",
-            "hash": "a89aba3c31d860440839f70f2d2feefa20c64cd216e4aad2a0dd321a513ce302"
+            "url": "https://www.softwareok.com/Download/DirPrintOK_x64.zip",
+            "hash": "10c1a61ee432fbacee9768eb41be00fec06cfb9dcf2db617052b3fdb4f79f1b5"
         },
         "32bit": {
-            "url": "https://www.softwareok.com/Download/DirPrintOK_Portable.zip",
-            "hash": "461a9a3d391b4c3373c27427438ccaeb0201758f3515ad752f052ddc38d3d79a"
+            "url": "https://www.softwareok.com/Download/DirPrintOK.zip",
+            "hash": "6b85dca0da3957d985004cf5d3cd66bca2d85e158e539404049e007b5e0d6df7"
         }
     },
     "shortcuts": [
@@ -20,6 +20,7 @@
         ]
     ],
     "pre_install": [
+                "Get-ChildItem \"$dir\" 'DirPrintOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'DirPrintOK.exe'",
         "if (!(Test-Path \"$persist_dir\\DirPrintOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\DirPrintOK.ini\" -Value $null }"
     ],
     "persist": "DirPrintOK.ini",
@@ -29,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.softwareok.com/Download/DirPrintOK_Portable_x64.zip"
+                "url": "https://www.softwareok.com/Download/DirPrintOK_x64.zip"
             },
             "32bit": {
-                "url": "https://www.softwareok.com/Download/DirPrintOK_Portable.zip"
+                "url": "https://www.softwareok.com/Download/DirPrintOK.zip"
             }
         }
     }
