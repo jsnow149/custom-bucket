@@ -1,0 +1,40 @@
+{
+    "version": "1.08",
+    "description": "Optimize your RAM usage.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/RAMagic",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/RAMagic.zip",
+            "hash": "63f23590e7772ee5998949e4a4fc975c5a627fa1b1527db8c5786cd4074fdf9e"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/RAMagic.zip",
+            "hash": "63f23590e7772ee5998949e4a4fc975c5a627fa1b1527db8c5786cd4074fdf9e"
+        }
+    },
+    "shortcuts": [
+        [
+            "RAMagic.exe",
+            "softwareOK\\RAMagic"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'RAMagic*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RAMagic.exe'",
+        "if (!(Test-Path \"$persist_dir\\RAMagic.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\RAMagic.ini\" -Value $null }"
+    ],
+    "persist": "RAMagic.ini",
+    "checkver": {
+        "regex": "RAMagic ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/RAMagic.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/RAMagic.zip"
+            }
+        }
+    }
+}
