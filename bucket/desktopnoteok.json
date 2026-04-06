@@ -19,7 +19,7 @@
         "if(!(Test-Path \"$persist_dir\\DesktopNoteOK.ini\")) {",
         "    New-Item \"$dir\\DesktopNoteOK.ini\" -Type File -Force | Out-Null",
         "}",
-        "Remove-Item \"$dir\\*\" -Exclude '*.exe',DesktopNoteOK.ini -Recurse -Force"
+        "Remove-Item \"$dir*\" -Exclude '*.exe',DesktopNoteOK.ini -Recurse -Force"
     ],
     "bin": "DesktopNoteOK.exe",
     "shortcuts": [
