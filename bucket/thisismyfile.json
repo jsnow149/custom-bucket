@@ -1,0 +1,40 @@
+{
+    "version": "4.48",
+    "description": "Deleting locked or protected files.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/ThisIsMyFile",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/ThisIsMyFile_x64.zip",
+            "hash": "7657870809b9a6a8fff321ec6b217ab2f48e8698d37898da3311165b079892ad"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/ThisIsMyFile.zip",
+            "hash": "b8e88ef1bb85ece6bceaae406067fa026fb8f7d7f92c3f95904d7a22931e3a11"
+        }
+    },
+    "shortcuts": [
+        [
+            "ThisIsMyFile.exe",
+            "softwareOK\\ThisIsMyFile"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'ThisIsMyFile*.exe' | Select-Object -First 1 | Rename-Item -NewName 'ThisIsMyFile.exe'",
+        "if (!(Test-Path \"$persist_dir\\ThisIsMyFile.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\ThisIsMyFile.ini\" -Value $null }"
+    ],
+    "persist": "ThisIsMyFile.ini",
+    "checkver": {
+        "regex": "ThisIsMyFile ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/ThisIsMyFile_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/ThisIsMyFile.zip"
+            }
+        }
+    }
+}
