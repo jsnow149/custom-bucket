@@ -18,7 +18,8 @@
         "Rename-Item \"$exefile\" \"$dir\\DesktopOK.exe\"",
         "if(!(Test-Path \"$persist_dir\\DesktopOK.ini\")) {",
         "    New-Item \"$dir\\DesktopOK.ini\" -Type File -Force | Out-Null",
-        "}"
+        "}",
+        "Remove-Item \"$dir\\*\" -Exclude '*.exe',DesktopNoteOK.ini -Recurse -Force"
     ],
     "bin": "DesktopOK.exe",
     "shortcuts": [
