@@ -20,7 +20,7 @@
         ]
     ],
     "pre_install": [
-        "Get-ChildItem \"$dir\" 'KeepMouseSpeedOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'KeepMouseSpeedOK.exe'",
+        "Get-ChildItem \"$dir\" 'KMS_OK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'KeepMouseSpeedOK.exe'",
         "if (!(Test-Path \"$persist_dir\\KeepMouseSpeedOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\KeepMouseSpeedOK.ini\" -Value $null }"
     ],
     "persist": "KeepMouseSpeedOK.ini",
