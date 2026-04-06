@@ -15,12 +15,11 @@
     },
     "shortcuts": [
         [
-            "DirPrintOK.exe",
+            "DirPrintOK_x64.exe",
             "softwareOK\\DirPrintOK"
         ]
     ],
     "pre_install": [
-        "Get-ChildItem -Path '$dir' -Recurse -File -Filter 'DirPrintOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'DirPrintOK.exe'",
         "if (!(Test-Path \"$persist_dir\\DirPrintOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\DirPrintOK.ini\" -Value $null }"
     ],
     "persist": "DirPrintOK.ini",
