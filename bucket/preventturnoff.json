@@ -1,0 +1,40 @@
+{
+    "version": "3.53",
+    "description": "Prevents the PC from going out or shutting down in a time-controlled manner.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/PreventTurnOff",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/PreventTurnOff_x64_Portable.zip",
+            "hash": "dfd72cab585e1d4de9a3483ae6f80db88b3cd291c7394134d8a5810ec9b7e603"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/PreventTurnOff_Portable.zip",
+            "hash": "39ea54eb046efa6094af25754c585b1fad51e6cd481255dc4a9db29a328f4c03"
+        }
+    },
+    "shortcuts": [
+        [
+            "PreventTurnOff.exe",
+            "softwareOK\\PreventTurnOff"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'PreventTurnOff*.exe' | Select-Object -First 1 | Rename-Item -NewName 'PreventTurnOff.exe'",
+        "if (!(Test-Path \"$persist_dir\\PreventTurnOff.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\PreventTurnOff.ini\" -Value $null }"
+    ],
+    "persist": "PreventTurnOff.ini",
+    "checkver": {
+        "regex": "PreventTurnOff ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/PreventTurnOff_x64_Portable.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/PreventTurnOff_Portable.zip"
+            }
+        }
+    }
+}
