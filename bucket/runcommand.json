@@ -1,0 +1,40 @@
+{
+    "version": "6.33",
+    "description": "Alternative to the standard Windows Run-Dialog.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/Run-Command",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/Run-Command_x64_Portable.zip",
+            "hash": "e0fef67c5d032cbf255253f44c078a71bd4b46971f93ff033a2aa73306af14f1"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/Run-Command_Portable.zip",
+            "hash": "77a2c48da6ff24d4bfc06c015be2c0561c090a4d649aacfa5736060dc6a1aafc"
+        }
+    },
+    "shortcuts": [
+        [
+            "Run-Command.exe",
+            "softwareOK\\Run-Command"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'Run-Command*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Run-Command.exe'",
+        "if (!(Test-Path \"$persist_dir\\Run-Command.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Run-Command.ini\" -Value $null }"
+    ],
+    "persist": "Run-Command.ini",
+    "checkver": {
+        "regex": "Run-Command ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/Run-Command_x64_Portable.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/Run-Command_Portable.zip"
+            }
+        }
+    }
+}
