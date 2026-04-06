@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'Delete.On.Reboot*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Delete.On.Reboot.exe'",
-        "if (!(Test-Path \"$persist_dir\\Delete.On.Reboot.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Delete.On.Reboot.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\Delete.On.Reboot.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Delete.On.Reboot.ini\" -Value $null }",
+        "Remove-Item \"$dir\\*\" -Exclude '*.exe',Delete.On.Reboot.ini -Recurse -Force"
     ],
     "persist": "Delete.On.Reboot.ini",
     "checkver": {
