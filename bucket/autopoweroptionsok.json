@@ -20,7 +20,7 @@
         ]
     ],
     "pre_install": [
-        "Get-ChildItem \"$dir\" 'AutoPowerOptionsOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'AutoPowerOptionsOK.exe'",
+        "Get-ChildItem \"$dir\" 'APO-OK_p*.exe' | Select-Object -First 1 | Rename-Item -NewName 'AutoPowerOptionsOK.exe'",
         "if (!(Test-Path \"$persist_dir\\AutoPowerOptionsOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\AutoPowerOptionsOK.ini\" -Value $null }"
     ],
     "persist": "AutoPowerOptionsOK.ini",
