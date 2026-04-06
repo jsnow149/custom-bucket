@@ -20,10 +20,9 @@
         ]
     ],
     "pre_install": [
-        "Get-ChildItem \"$dir\" 'Brightness.Manager.OK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Brightness.Manager.OK.exe'",
+        "Get-ChildItem \"$dir\" 'Brightness.Manager.OK_p*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Brightness.Manager.OK.exe'",
         "if (!(Test-Path \"$persist_dir\\Brightness.Manager.OK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Brightness.Manager.OK.ini\" -Value $null }"
     ],
-    "persist": "Brightness.Manager.OK.ini",
     "checkver": {
         "regex": "Brightness.Manager.OK ([\\d.]+)"
     },
