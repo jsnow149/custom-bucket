@@ -1,16 +1,16 @@
 {
-    "version": "1.00",
+    "version": "1.01",
     "description": "Magical mouse movements against idle time and connection drops.",
     "homepage": "https://softwareok.com/?seite=Microsoft/MagicMouseMove",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/MagicMouseMove_Portable.zip",
-            "hash": "00720325398ebac342057669748d54469a8b7d1f8114f78d93a6602d458f1e4e"
+            "hash": "4f6ea07bf010981ee45ac23391c63051977c2f66cbd1e536084747dd21d1da33"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/MagicMouseMove_Portable.zip",
-            "hash": "00720325398ebac342057669748d54469a8b7d1f8114f78d93a6602d458f1e4e"
+            "hash": "4f6ea07bf010981ee45ac23391c63051977c2f66cbd1e536084747dd21d1da33"
         }
     },
     "shortcuts": [
