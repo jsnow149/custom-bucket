@@ -8,10 +8,13 @@
     },
     "url": "https://www.softwareok.com/Download/WinScan2PDF_Portable.zip",
     "hash": "a7629f1d71c22c0b9d9de76220f46ceae2a900269c97a216e8a499c543123bcb",
-    "pre_install": "if (-not (Test-Path \"$persist_dir\\WinScan2PDF_p.ini\")) { New-Item \"$dir\\WinScan2PDF_p.ini\" | Out-Null }",
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'WinScan2PDF*.exe' | Select-Object -First 1 | Rename-Item -NewName 'WinScan2PDF.exe'",
+        "if (!(Test-Path \"$persist_dir\\WinScan2PDF.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\WinScan2PDF.ini\" -Value $null }"
+    ],
     "bin": [
         [
-            "WinScan2PDF_p.exe",
+            "WinScan2PDF.exe",
             "WinScan2PDF"
         ]
     ],
