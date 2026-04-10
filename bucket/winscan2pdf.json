@@ -24,7 +24,7 @@
             "softwareOK\\WinScan2PDF"
         ]
     ],
-    "persist": "WinScan2PDF_p.ini",
+    "persist": "WinScan2PDF.ini",
     "checkver": {
         "url": "https://www.softwareok.com/?seite=Microsoft/WinScan2PDF/History",
         "regex": "version ([\\d.]+)"
