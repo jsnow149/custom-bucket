@@ -23,7 +23,10 @@
         "Get-ChildItem \"$dir\" 'QuickTextPaste*.exe' | Select-Object -First 1 | Rename-Item -NewName 'QuickTextPaste.exe'",
         "if (!(Test-Path \"$persist_dir\\QuickTextPaste.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\QuickTextPaste.ini\" -Value $null }"
     ],
-    "persist": "QuickTextPaste.ini",
+     "persist": [
+        "Backup",
+        "QuickTextPaste.ini"
+    ],
     "checkver": {
         "url": "https://www.softwareok.com/?seite=Microsoft/QuickTextPaste/History",
         "regex": "version ([\\d.]+)"
