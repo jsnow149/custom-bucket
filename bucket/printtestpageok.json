@@ -20,8 +20,8 @@
         ]
     ],
     "pre_install": [
-        "Get-ChildItem \"$dir\" 'AutoPowerOptionsOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'AutoPowerOptionsOK.exe'",
-        "if (!(Test-Path \"$persist_dir\\AutoPowerOptionsOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\AutoPowerOptionsOK.ini\" -Value $null }"
+        "Get-ChildItem \"$dir\" 'Print.Test.Page.OK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Print.Test.Page.OK.exe'",
+        "if (!(Test-Path \"$persist_dir\\Print.Test.Page.OK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Print.Test.Page.OK.ini\" -Value $null }"
     ],
     "persist": "Print.Test.Page.OK.ini",
     "checkver": {
