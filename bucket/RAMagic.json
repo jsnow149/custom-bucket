@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'RAMagic*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RAMagic.exe'",
-        "if (!(Test-Path \"$persist_dir\\RAMagic.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\RAMagic.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\RAMagic.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\RAMagic.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe',RAMagic.ini -Recurse -Force"
     ],
     "persist": "RAMagic.ini",
     "checkver": {
