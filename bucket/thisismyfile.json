@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'ThisIsMyFile*.exe' | Select-Object -First 1 | Rename-Item -NewName 'ThisIsMyFile.exe'",
-        "if (!(Test-Path \"$persist_dir\\ThisIsMyFile.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\ThisIsMyFile.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\ThisIsMyFile.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\ThisIsMyFile.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe',ThisIsMyFile.ini -Recurse -Force"
     ],
     "persist": "ThisIsMyFile.ini",
     "checkver": {
