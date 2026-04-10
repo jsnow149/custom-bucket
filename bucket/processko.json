@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'ProcessKO*.exe' | Select-Object -First 1 | Rename-Item -NewName 'ProcessKO.exe'",
-        "if (!(Test-Path \"$persist_dir\\ProcessKO.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\ProcessKO.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\ProcessKO.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\ProcessKO.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe','*.ini' -Recurse -Force"
     ],
     "persist": [
         "ProcessKO.ini",
