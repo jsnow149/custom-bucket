@@ -22,7 +22,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'OpenCloseDriveEject*.exe' | Select-Object -First 1 | Rename-Item -NewName 'OpenCloseDriveEject.exe'",
-        "if (!(Test-Path \"$persist_dir\\OpenCloseDriveEject.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\OpenCloseDriveEject.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\OpenCloseDriveEject.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\OpenCloseDriveEject.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe',OpenCloseDriveEject.ini -Recurse -Force"
     ],
     "persist": "OpenCloseDriveEject.ini",
     "checkver": {
