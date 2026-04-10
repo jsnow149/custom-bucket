@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'NewFileTime*.exe' | Select-Object -First 1 | Rename-Item -NewName 'NewFileTime.exe'",
-        "if (!(Test-Path \"$persist_dir\\NewFileTime.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\NewFileTime.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\NewFileTime.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\NewFileTime.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe',NewFileTime.ini -Recurse -Force"
     ],
     "persist": "NewFileTime.ini",
     "checkver": {
