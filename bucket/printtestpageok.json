@@ -21,7 +21,8 @@
     ],
     "pre_install": [
         "Get-ChildItem \"$dir\" 'Print.Test.Page.OK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'Print.Test.Page.OK.exe'",
-        "if (!(Test-Path \"$persist_dir\\Print.Test.Page.OK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Print.Test.Page.OK.ini\" -Value $null }"
+        "if (!(Test-Path \"$persist_dir\\Print.Test.Page.OK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Print.Test.Page.OK.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe','*.ini' -Recurse -Force"
     ],
     "persist": "Print.Test.Page.OK.ini",
     "checkver": {
