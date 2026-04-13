@@ -1,16 +1,16 @@
 {
-    "version": "3.48",
+    "version": "3.51",
     "description": "Reduce your photos in file size.",
     "homepage": "https://softwareok.com/?seite=Microsoft/PhotoResizerOK",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/PhotoResizerOK_x64.zip",
-            "hash": "c1e71d9898ba6450037e34ee0575ca0d1cc96f758fbfa913a36f788d406ad584"
+            "hash": "5644c8ca109f039e3dcd4b70cc09655f10f45d2f8554022d1a7dcff8745fa6a8"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/PhotoResizerOK.zip",
-            "hash": "6032f7971063fc1941dc02228cbaf17e5aaebe6a8bf9411e7e166d8a8482f6b7"
+            "hash": "de0bc291eb02874f991860320233b8feb257985d3b28e6868e6e23687dd3c7d5"
         }
     },
     "shortcuts": [
