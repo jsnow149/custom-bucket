@@ -1,16 +1,16 @@
 {
-    "version": "1.09",
+    "version": "1.11",
     "description": "Optimize your RAM usage.",
     "homepage": "https://softwareok.com/?seite=Microsoft/RAMagic",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/RAMagic.zip",
-            "hash": "b6d0bff5ae4c9cd0a67286b2efdf23b64afd0856a9ba55b76bb5f1eed119be27"
+            "hash": "4d80b8b2b107f5cc33adfd08babed8a625194e10a5b3d0288ea336ca3c1f436c"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/RAMagic.zip",
-            "hash": "b6d0bff5ae4c9cd0a67286b2efdf23b64afd0856a9ba55b76bb5f1eed119be27"
+            "hash": "4d80b8b2b107f5cc33adfd08babed8a625194e10a5b3d0288ea336ca3c1f436c"
         }
     },
     "shortcuts": [
