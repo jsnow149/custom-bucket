@@ -1,16 +1,16 @@
 {
-    "version": "4.48",
+    "version": "4.51",
     "description": "Deleting locked or protected files.",
     "homepage": "https://softwareok.com/?seite=Microsoft/ThisIsMyFile",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/ThisIsMyFile_x64.zip",
-            "hash": "7657870809b9a6a8fff321ec6b217ab2f48e8698d37898da3311165b079892ad"
+            "hash": "c9b5d1bbd3ad296c39ac55749a7c29fb22d688aa414afd85677960c58a6a79c0"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/ThisIsMyFile.zip",
-            "hash": "b8e88ef1bb85ece6bceaae406067fa026fb8f7d7f92c3f95904d7a22931e3a11"
+            "hash": "eaa227f53325ddb5dcaa1e83ae1eab9742db11665f3a881aaeab3c81abd923e6"
         }
     },
     "shortcuts": [
