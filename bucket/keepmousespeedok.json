@@ -1,16 +1,16 @@
 {
-    "version": "3.51",
+    "version": "3.55",
     "description": "Keep the Mouse Speed.",
     "homepage": "https://softwareok.com/?seite=Microsoft/KeepMouseSpeedOK",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip",
-            "hash": "5e47eb1a52a73cabbcfd097e6a6524daa254090bfb8cfbb95e445cb02ce4d169"
+            "hash": "0eac8365893ec57514a3efb7148b3d9f4b361b516cd1889e2797ad2a16ac80fb"
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/KeepMouseSpeedOK_Portable.zip",
-            "hash": "5e47eb1a52a73cabbcfd097e6a6524daa254090bfb8cfbb95e445cb02ce4d169"
+            "hash": "0eac8365893ec57514a3efb7148b3d9f4b361b516cd1889e2797ad2a16ac80fb"
         }
     },
     "shortcuts": [
