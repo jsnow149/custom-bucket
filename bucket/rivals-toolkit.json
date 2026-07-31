@@ -1,10 +1,10 @@
 {
-    "version": "0.11.0",
+    "version": "0.12.0",
     "description": "Desktop app for working with Marvel Rivals configuration and mod files.",
     "homepage": "https://github.com/oZanderr/Rivals-Toolkit",
     "license": "GNU",
-    "url": "https://github.com/oZanderr/Rivals-Toolkit/releases/download/v0.11.0/rivals-toolkit-v0.11.0-windows-x64.zip",
-    "hash": "bc73e3981c7d4b798d605ca986459d0d0c43b989487ba0cf02f35c71874c8237",
+    "url": "https://github.com/oZanderr/Rivals-Toolkit/releases/download/v0.12.0/rivals-toolkit-v0.12.0-windows-x64.zip",
+    "hash": "868b08b6a9947c38e744f993b81524ef0cb911592fb6143c38af1a7be75401cc",
     "shortcuts": [
         [
             "rivals-toolkit.exe",
