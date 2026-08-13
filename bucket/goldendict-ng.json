@@ -1,0 +1,35 @@
+{
+    "version": "26.8.0",
+    "description": "A feature-rich dictionary lookup program",
+    "homepage": "https://github.com/xiaoyifang/goldendict-ng",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v26.8.0/GoldenDict-ng-26.8.0-Qt6.8.3-Windows.7z",
+    "hash": "7e297333edda6f9a209c88766ace131b6d1985f9ba270ba9dd45c01e7c916042",
+    "extract_dir": "GoldenDict-ng-26.8.0-Qt6.8.3",
+    "bin": [
+        [
+            "GoldenDict.exe",
+            "goldendict-ng.exe"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "GoldenDict.exe",
+            "GoldenDict-ng"
+        ]
+    ],
+    "persist": [
+        "portable",
+        "content"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v$version/GoldenDict-ng-$version-Qt6.8.3-Windows.7z",
+        "extract_dir": "GoldenDict-ng-$version-Qt6.8.3",
+        "hash": {
+            "mode": "json",
+            "url": "https://api.github.com/repos/xiaoyifang/goldendict-ng/releases/latest",
+            "jp": "$..assets[?(@.name=='GoldenDict-ng-$version-Qt6.8.3-Windows.7z')].digest"
+        }
+    }
+}
