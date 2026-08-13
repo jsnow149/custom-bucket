@@ -1,0 +1,41 @@
+{
+    "version": "5.55",
+    "description": "Quickly check the RAM for errors.",
+    "homepage": "https://softwareok.com/?seite=Microsoft/QuickMemoryTestOK",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.softwareok.com/Download/QuickMemoryTestOK_x64.zipp",
+            "hash": "c47d9a4eae6576a3994214ad9db56ade23ccead73dff00b5647eda58550c60ea"
+        },
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/QuickMemoryTestOK.zip",
+            "hash": "c9cdec92d1cd1fd2f939f6da8f62b9d91d297f0c50efbb55a3b853f1412744e9"
+        }
+    },
+    "shortcuts": [
+        [
+            "QuickMemoryTestOK.exe",
+            "softwareOK\\QuickMemoryTestOK"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'QuickMemoryTestOK*.exe' | Select-Object -First 1 | Rename-Item -NewName 'QuickMemoryTestOK.exe'",
+        "if (!(Test-Path \"$persist_dir\\QuickMemoryTestOK.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\QuickMemoryTestOK.ini\" -Value $null }",
+        "Remove-Item \"$dir*\" -Exclude '*.exe',QuickMemoryTestOK.ini -Recurse -Force"
+    ],
+    "persist": "QuickMemoryTestOK.ini",
+    "checkver": {
+        "regex": "QuickMemoryTestOK ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/QuickMemoryTestOK_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/QuickMemoryTestOK.zip"
+            }
+        }
+    }
+}
